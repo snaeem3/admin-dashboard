@@ -1,0 +1,43 @@
+:root {
+    --color-primary: rgb(0, 174, 255);
+    --color-secondary: yellow;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+header {
+    grid-column: 2 / 3;
+}
+
+#sidebar {
+    grid-row: 1 / 3;
+    background: var(--color-primary);
+}
+
+#main-content {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background: rgb(226, 226, 226);
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#projects {
+    grid-row: 1 / 3;
+}
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+}
