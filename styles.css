@@ -1,6 +1,9 @@
 :root {
     --color-primary: rgb(0, 174, 255);
-    --color-secondary: yellow;
+    --color-secondary: rgb(255, 174, 0);
+    --section-padding: 8px;
+    --section-margin: 8px;
+    --border-radius-default: 8px;
 }
 
 * {
@@ -10,6 +13,7 @@
 }
 
 body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
@@ -17,11 +21,67 @@ body {
 
 header {
     grid-column: 2 / 3;
+    padding: var(--section-padding);
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+header form {
+    justify-self: start;
+    align-self: center;
+    padding: var(--section-padding);
+}
+
+#account-container {
+    justify-self: end;
+    align-self: center;
+}
+
+#hello-container {
+    justify-self: start;
+    align-self: center;
+    padding: var(--section-padding);
+}
+
+#header-main-buttons {
+    display: flex;
+    gap: 30px;
+    padding: var(--section-padding);
+    justify-self: end;
+    align-self: center;
+}
+
+#header-main-buttons button {
+    background-color: var(--color-primary);
+    border: none;
+    text-decoration: none;
+    color: white;
+    border-radius: 32px;
+    padding: 8px;
+    font-size: 16px;
+    width: 100px;
+    text-align: center;
 }
 
 #sidebar {
     grid-row: 1 / 3;
     background: var(--color-primary);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: var(--section-padding);
+}
+
+ul {
+    list-style: none;
+}
+
+#sidebar .logo,
+#sidebar-buttons,
+#sidebar-options {
+    padding: var(--section-padding);
 }
 
 #main-content {
@@ -35,9 +95,53 @@ header {
 
 #projects {
     grid-row: 1 / 3;
+    padding: var(--section-padding);
 }
 
 #card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 100px);
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+.card {
+    padding: var(--section-padding);
+    border-radius: var(--border-radius-default);
+    border-left: 0.5rem solid var(--color-secondary);
+}
+
+#announcements {
+    margin: var(--section-margin);
+}
+
+#announcement-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: var(--section-padding);
+    border-radius: var(--border-radius-default);
+}
+
+.announcement {
+    padding: var(--section-padding);
+}
+
+#trending {
+    margin: var(--section-margin);
+}
+
+#trending-user-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 8px;
+    padding: var(--section-padding);
+    border-radius: var(--border-radius-default);
+}
+
+#announcement-container,
+#trending-user-container,
+.card {
+    background: white;
+}
+
