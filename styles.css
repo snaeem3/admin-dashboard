@@ -18,6 +18,10 @@ p {
     font-size: 12px;
 }
 
+img {
+    height: 1.5rem;
+}
+
 body {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     display: grid;
@@ -95,13 +99,26 @@ header form {
     padding: var(--section-padding);
 }
 
+.logo img {
+    height: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 ul {
     list-style: none;
 }
 
 li {
-    margin-bottom: 30px;
-    margin-left: 16px;
+    margin-bottom: 10px;
+    margin-left: var(--section-margin);
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 #sidebar .logo,
