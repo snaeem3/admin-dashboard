@@ -78,6 +78,10 @@ header form {
 #account-container {
     justify-self: end;
     align-self: center;
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
 #hello-container {
@@ -175,6 +179,14 @@ li {
     flex-direction: column;
     gap: 16px;
     box-shadow: 2px 5px 5px var(--color-shadow);
+}
+
+.card-icons {
+    align-self: end;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
 }
 
 #announcements {
