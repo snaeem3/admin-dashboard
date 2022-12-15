@@ -100,7 +100,7 @@ header form {
     align-self: center;
 
     display: flex;
-    gap: 8px;
+    gap: 16px;
     align-items: center;
 }
 
@@ -167,11 +167,16 @@ ul {
 }
 
 li {
+    padding: var(--section-padding);
     margin-bottom: 10px;
     margin-left: var(--section-margin);
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+li:hover {
+    border-left: 2px solid var(--color-secondary);
 }
 
 #sidebar .logo,
