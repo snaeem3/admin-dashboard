@@ -28,6 +28,20 @@ img {
     width: 3rem;
 }
 
+@media only screen and (max-width: 900px) {
+    #header-main-buttons {
+        flex-direction: column;
+    }
+    #main-content {
+        grid-template-columns: 1fr;
+    }
+    #projects,
+    #announcements,
+    #trending {
+        grid-column: 1 / 2;
+    }
+ }
+
 body {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     display: grid;
@@ -37,7 +51,7 @@ body {
 
 header {
     grid-column: 2 / 3;
-    padding: var(--section-padding);
+    padding: var(--section-padding) 16px;
     
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -184,7 +198,7 @@ li {
     margin-top: var(--section-margin);
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .card {
