@@ -1,4 +1,4 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');:root {
     --color-primary: rgb(0, 174, 255);
     --color-secondary: rgb(255, 174, 0);
     --color-shadow: grey;
@@ -43,7 +43,7 @@ img {
  }
 
 body {
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Lexend Deca', sans-serif;
     display: grid;
     grid-template-columns: min(200px, 1fr) 4fr;
     grid-template-rows: 1fr 5fr;
